@@ -51,6 +51,7 @@ CREATE TABLE Kategori_events (
 
 CREATE TABLE EVENTS (
 	id_event INT(11) PRIMARY KEY AUTO_INCREMENT,
+	nama_event VARCHAR(255),
 	kategori INT(11) NOT NULL,
 	tgl_mulai DATE NOT NULL,
 	tgl_akhir DATE NOT NULL,
@@ -119,3 +120,12 @@ SELECT * FROM Instruktur JOIN Bidang ON Instruktur.bidang=Bidang.id_bidang;
 INSERT INTO Instruktur (id_instruktur, nama_instruktur, tgl_lahir, alamat_instrukur, gender, bidang)
 VALUES 
 	(DEFAULT, "instruktur 2", "1995-01-01", "Spanyol", 0, 4);
+	
+# events
+SELECT * FROM EVENTS;
+DROP TABLE EVENTS;
+INSERT INTO EVENTS (id_event, nama_event, kategori, tgl_mulai, tgl_akhir, harga, deskripsi, instruktur, id_admin)
+    VALUES
+        (DEFAULT, "Event 1", 75, "2000-12-15", "2000-12-15", 2000000, "oke", 4, 12);
+
+SELECT * FROM EVENTS JOIN Kategori ON Events.

@@ -9,15 +9,21 @@ if (isset($_POST["edit"])) {
     $alamat = $_POST["alamat"];
     $gender = $_POST["gender"];
     $bidang = $_POST["bidang"];
-    $query = "UPDATE Bidang 
+    $query = "UPDATE Instruktur 
         SET 
-            nama_bidang='$nama',
+            nama_instruktur='$nama',
+            tgl_lahir='$tgl_lahir',
+            alamat_instrukur='$alamat',
+            gender='$gender',
+            bidang='$bidang'
         WHERE 
-            id_bidang='$id'";
+            id_instruktur='$id'";
 
     if ($query = mysqli_query($koneksi, $query)) {
+        // echo mysqli_error($koneksi);
         header('location: ../view/instruktur/index.php?status=success');
     } else {
+        // echo mysqli_error($koneksi);
         header('location: ../view/instruktur/edit_instruktur.php?status=error');
     }
 }
