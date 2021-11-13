@@ -1,7 +1,7 @@
-<?php include('../../template/head_admin.php'); ?>
+<?php include('../../../template/head_admin.php'); ?>
 
 <?php
-require_once('../../controller/config.php');
+require_once('../../../controller/config.php');
 
 if (isset($_POST["edit"])) {
     $query = "SELECT * FROM Kategori_events WHERE id=" . $_POST['id'];
@@ -31,7 +31,7 @@ if (isset($_POST["edit"])) {
     <div class="card mt-5 mb-5" style="width: 60%;">
         <div class="card-header bg-primary text-white mb-3">Edit Kategori Event</div>
         <div class="card-body">
-            <form action="../../controller/ke_update.php" method="POST">
+            <form action="../../../controller/ke_update.php" method="POST">
                 <input hidden type="text" name="id" value="<?= $_POST['id'] ?>">
                 <div class="form-group mb-3">
                     <label for="nama">Nama</label>
@@ -46,4 +46,4 @@ if (isset($_POST["edit"])) {
 
 </div>
 
-<?php include('../../template/foot.php'); ?>
+<?php include('../../../template/foot.php'); ?>

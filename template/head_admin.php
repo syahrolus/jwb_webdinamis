@@ -288,56 +288,56 @@
         <ul class="sidebar-nav" id="sidebar-nav">
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="/jwb_webdinamis/view/dashboard.php">
+                <a class="nav-link collapsed" href="/jwb_webdinamis/view/dashboardAdmin/dashboard.php">
                     <i class="bi bi-grid"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="/jwb_webdinamis/view/events/index.php">
+                <a class="nav-link collapsed" href="/jwb_webdinamis/view/dashboardAdmin/events/index.php">
                     <i class="bi bi-grid"></i>
                     <span>Events</span>
                 </a>
             </li>
             
             <li class="nav-item">
-                <a class="nav-link collapsed" href="/jwb_webdinamis/view/peserta/index.php">
+                <a class="nav-link collapsed" href="/jwb_webdinamis/view/dashboardAdmin/peserta/index.php">
                     <i class="bi bi-grid"></i>
                     <span>Peserta</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="/jwb_webdinamis/view/instruktur/index.php">
+                <a class="nav-link collapsed" href="/jwb_webdinamis/view/dashboardAdmin/instruktur/index.php">
                     <i class="bi bi-grid"></i>
                     <span>Instruktur</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="/jwb_webdinamis/view/bidang/index.php">
+                <a class="nav-link collapsed" href="/jwb_webdinamis/view/dashboardAdmin/bidang/index.php">
                     <i class="bi bi-grid"></i>
                     <span>Bidang</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="/jwb_webdinamis/view/kategori_event/index.php">
+                <a class="nav-link collapsed" href="/jwb_webdinamis/view/dashboardAdmin/kategori_event/index.php">
                     <i class="bi bi-grid"></i>
                     <span>Kategori Event</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="/jwb_webdinamis/view/record/index.php">
+                <a class="nav-link collapsed" href="/jwb_webdinamis/view/dashboardAdmin/record/index.php">
                     <i class="bi bi-grid"></i>
                     <span>Record peserta</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="/jwb_webdinamis/view/uang_peserta/index.php">
+                <a class="nav-link collapsed" href="/jwb_webdinamis/view/dashboardAdmin/uang_peserta/index.php">
                     <i class="bi bi-grid"></i>
                     <span>Pendaftaran peserta</span>
                 </a>

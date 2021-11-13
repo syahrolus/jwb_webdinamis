@@ -1,12 +1,12 @@
 <?php
 
-require_once('../../controller/config.php');
+require_once('../../../controller/config.php');
 
 
 
 ?>
 
-<?php include('../../template/head_admin.php'); ?>
+<?php include('../../../template/head_admin.php'); ?>
 
 <div class="pagetitle">
     <h1>Tambah Instruktur</h1>
@@ -18,7 +18,7 @@ require_once('../../controller/config.php');
     <div class="card mt-5 mb-5" style="width: 60%;">
         <div class="card-header bg-primary text-white mb-3">Tambah Instruktur</div>
         <div class="card-body">
-            <form action="../../controller/instruktur_create.php" method="POST">
+            <form action="../../../controller/instruktur_create.php" method="POST">
                 <div class="form-group mb-3">
                     <label for="nama">Nama</label>
                     <input type="text" class="form-control" id="nama" placeholder="Enter nama" name="nama">
@@ -73,4 +73,4 @@ require_once('../../controller/config.php');
 
 </div>
 
-<?php include('../../template/foot.php'); ?>
+<?php include('../../../template/foot.php'); ?>

@@ -1,7 +1,7 @@
-<?php include('../../template/head_admin.php'); ?>
+<?php include('../../../template/head_admin.php'); ?>
 
 <?php
-require_once('../../controller/config.php');
+require_once('../../../controller/config.php');
 
 if (isset($_POST["edit"])) {
     $query = "SELECT * FROM Instruktur WHERE id_instruktur=" . $_POST['id'];
@@ -87,4 +87,4 @@ if (isset($_POST["edit"])) {
 
 </div>
 
-<?php include('../../template/foot.php'); ?>
+<?php include('../../../template/foot.php'); ?>

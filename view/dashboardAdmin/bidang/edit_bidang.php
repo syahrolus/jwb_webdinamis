@@ -1,7 +1,7 @@
-<?php include('../../template/head_admin.php'); ?>
+<?php include('../../../template/head_admin.php'); ?>
 
 <?php
-require_once('../../controller/config.php');
+require_once('../../../controller/config.php');
 
 if (isset($_POST["edit"])) {
     $query = "SELECT * FROM Bidang WHERE id_bidang=" . $_POST['id'];
@@ -46,4 +46,4 @@ if (isset($_POST["edit"])) {
 
 </div>
 
-<?php include('../../template/foot.php'); ?>
+<?php include('../../../template/foot.php'); ?>

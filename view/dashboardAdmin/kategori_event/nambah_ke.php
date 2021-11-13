@@ -1,4 +1,4 @@
-<?php include('../../template/head_admin.php');?>
+<?php include('../../../template/head_admin.php');?>
 
 <div class="pagetitle">
     <h1>Kategori Event</h1>
@@ -8,9 +8,9 @@
 <div class="container d-flex justify-content-center">
 
     <div class="card mt-5 mb-5" style="width: 60%;">
-        <div class="card-header bg-primary text-white mb-3">Tambah Bidang</div>
+        <div class="card-header bg-primary text-white mb-3">Tambah Kategori Event</div>
         <div class="card-body">
-            <form action="../../controller/bidang_create.php" method="POST">
+            <form action="../../../controller/ke_create.php" method="POST">
                 <div class="form-group mb-3">
                     <label for="nama">Nama</label>
                     <input type="text" class="form-control" id="nama" placeholder="Enter nama" name="nama">
@@ -24,4 +24,4 @@
 
 </div>
 
-<?php include('../../template/foot.php');?>
+<?php include('../../../template/foot.php');?>

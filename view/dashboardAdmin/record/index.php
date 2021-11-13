@@ -1,7 +1,7 @@
-<?php include('../../template/head_admin.php'); ?>
+<?php include('../../../template/head_admin.php'); ?>
 
 <div class="pagetitle">
-    <h1>Peserta</h1>
+    <h1>Record Pendaftaran Peserta</h1>
 </div>
 
 <div class="card">
@@ -11,12 +11,10 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Username</th>
-                    <th scope="col">No HP</th>
-                    <th scope="col">Tgl akhir</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Address</th>
-                    <th scope="col">Gender</th>
+                    <th scope="col">Id Peserta</th>
+                    <th scope="col">Nama</th>
+                    <th scope="col">Nama Events</th>
+                    <th scope="col">Status</th>
                     <th scope="col">Admin</th>
                     <th scope="col">Action</th>
                 </tr>
@@ -29,8 +27,6 @@
                     <td>17-08-1945</td>
                     <td>18-08-1945</td>
                     <td>Rp. 2000.000</td>
-                    <td>Jono the Jene</td>
-                    <td>Admin1</td>
                     <td>
                         <a class='btn btn-primary' href='#' role='button'>Edit</a>
                         <a class='btn btn-danger' onclick='validation(1)' href='#' role='button'>Hapus</a>
@@ -46,4 +42,4 @@
     </div>
 </div>
 
-<?php include('../../template/foot.php'); ?>
+<?php include('../../../template/foot.php'); ?>

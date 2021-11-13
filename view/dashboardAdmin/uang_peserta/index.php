@@ -1,7 +1,7 @@
-<?php include('../../template/head_admin.php'); ?>
+<?php include('../../../template/head_admin.php'); ?>
 
 <div class="pagetitle">
-    <h1>Record Pendaftaran Peserta</h1>
+    <h1>Uang Peserta</h1>
 </div>
 
 <div class="card">
@@ -12,9 +12,9 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Id Peserta</th>
-                    <th scope="col">Nama</th>
-                    <th scope="col">Nama Events</th>
-                    <th scope="col">Status</th>
+                    <th scope="col">Nama Peserta</th>
+                    <th scope="col">Tgl Kirim</th>
+                    <th scope="col">Event</th>
                     <th scope="col">Admin</th>
                     <th scope="col">Action</th>
                 </tr>
@@ -42,4 +42,4 @@
     </div>
 </div>
 
-<?php include('../../template/foot.php'); ?>
+<?php include('../../../template/foot.php'); ?>

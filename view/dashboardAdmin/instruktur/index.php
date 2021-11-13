@@ -1,6 +1,6 @@
-<?php require_once('../../controller/config.php'); ?>
+<?php require_once('../../../controller/config.php'); ?>
 
-<?php include('../../template/head_admin.php'); ?>
+<?php include('../../../template/head_admin.php'); ?>
 
 
 <div class="pagetitle">
@@ -62,4 +62,4 @@
     </div>
 </div>
 
-<?php include('../../template/foot.php'); ?>
+<?php include('../../../template/foot.php'); ?>
