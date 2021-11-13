@@ -14,7 +14,7 @@ if (isset($_POST["edit"])) {
     // header("location: ../dashboard.php?status=error");
 ?>
     <script>
-        window.location.replace("http://<?= $_SERVER['SERVER_NAME'] ?>/jwb_webdinamis/view/events/index.php");
+        window.location.replace("http://<?= $_SERVER['SERVER_NAME'] ?>/jwb_webdinamis/view/dashboardAdmin/events/index.php");
     </script>
 <?php
 }
@@ -31,7 +31,7 @@ if (isset($_POST["edit"])) {
     <div class="card mt-5 mb-5" style="width: 60%;">
         <div class="card-header bg-primary text-white mb-3">Edit Events</div>
         <div class="card-body">
-            <form action="../../controller/event_update.php" method="POST">
+            <form action="../../../controller/event_update.php" method="POST">
                 <input hidden type="text" name="id" value="<?= $row['id_event'] ?>">
                 <div class="form-group mb-3">
                     <label for="nama">Nama</label>

@@ -18,7 +18,7 @@ require_once('../../../controller/config.php');
     <div class="card mt-5 mb-5" style="width: 60%;">
         <div class="card-header bg-primary text-white mb-3">Tambah Events</div>
         <div class="card-body">
-            <form action="../../controller/event_create.php" method="POST">
+            <form action="../../../controller/event_create.php" method="POST">
                 <div class="form-group mb-3">
                     <label for="nama">Nama</label>
                     <input type="text" class="form-control" id="nama" placeholder="Enter nama" name="nama">

@@ -14,7 +14,7 @@ if (isset($_POST["edit"])) {
     // header("location: ../dashboard.php?status=error");
 ?>
     <script>
-        window.location.replace("http://<?= $_SERVER['SERVER_NAME']?>/jwb_webdinamis/view/kategori_event/index.php");
+        window.location.replace("http://<?= $_SERVER['SERVER_NAME']?>/jwb_webdinamis/view/dashboardAdmin/kategori_event/index.php");
     </script>
 <?php
 }
