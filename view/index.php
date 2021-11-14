@@ -1,4 +1,7 @@
 <?php require_once('../controller/config.php');
+
+session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -80,7 +83,12 @@
       </nav><!-- .navbar -->
 
       <div>
-        <a href="login.php" class="get-started-btn scrollto">Login</a>
+        <?php
+        if ($_SESSION["login"] == "true") { ?>
+          <a href="dashboard/dashboard.php" class="get-started-btn scrollto">Dashboard</a>
+        <?php } else { ?>
+          <a href="login.php" class="get-started-btn scrollto">Login</a>
+        <?php } ?>
         <!-- <a href="#about" class="get-started-btn scrollto">Register</a> -->
       </div>
 
@@ -202,7 +210,7 @@
 
 
         <div class="row">
-          <div class="section-title pb-0  mb-4" id="eventTraining">
+          <div class="section-title pb-0 mb-4" id="eventTraining">
             <h2>Training</h2>
           </div>
 
@@ -218,7 +226,6 @@
                   <div class="icon"><i class="fas fa-code"></i></div>
                   <h4><a href="detail-events.php?id=<?= $data['id_event'] ?>"><?= $data['nama_event']; ?></a></h4>
                   <p>Harga : Rp. <?= $data['harga'] ?> </p>
-                  <p>Deskripsi : <?= $data['deskripsi'] ?> </p>
                   <a class="btn btn-success mt-4" href="detail-events.php?id=<?= $data['id_event'] ?>" role="button" style="margin-left: 1%; width: 90%;">Baca Selengkapnya <i class="bi bi-chevron-right"></i></a>
                 </div>
               </div>
@@ -255,7 +262,6 @@
                   <div class="icon"><i class="fas fa-code"></i></div>
                   <h4><a href="detail-events.php?id=<?= $data['id_event'] ?>"><?= $data['nama_event']; ?></a></h4>
                   <p>Harga : Rp. <?= $data['harga'] ?> </p>
-                  <p>Deskripsi : <?= $data['deskripsi'] ?> </p>
                   <a class="btn btn-success mt-4" href="detail-events.php?id=<?= $data['id_event'] ?>" role="button" style="margin-left: 1%; width: 90%;">Baca Selengkapnya <i class="bi bi-chevron-right"></i></a>
                 </div>
               </div>
@@ -289,7 +295,6 @@
                   <div class="icon"><i class="fas fa-code"></i></div>
                   <h4><a href="detail-events.php?id=<?= $data['id_event'] ?>"><?= $data['nama_event']; ?></a></h4>
                   <p>Harga : Rp. <?= $data['harga'] ?> </p>
-                  <p>Deskripsi : <?= $data['deskripsi'] ?> </p>
                   <a class="btn btn-success mt-4" href="detail-events.php?id=<?= $data['id_event'] ?>" role="button" style="margin-left: 1%; width: 90%;">Baca Selengkapnya <i class="bi bi-chevron-right"></i></a>
                 </div>
               </div>

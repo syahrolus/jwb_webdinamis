@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+
+if ($_SESSION["login"] == "true") {
+    header('location: /jwb_webdinamis/view/index.php?status=success');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -135,6 +145,7 @@
     </script>
     <!--===============================================================================================-->
     <script src="../assets/assets3/js/main.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <?php
 

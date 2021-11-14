@@ -1,4 +1,7 @@
-<?php require_once('../controller/config.php'); ?>
+<?php require_once('../controller/config.php');
+session_start();
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -78,7 +81,12 @@
       </nav><!-- .navbar -->
 
       <div>
-        <a href="login.php" class="get-started-btn scrollto">Login</a>
+        <?php
+        if ($_SESSION["login"] == "true") { ?>
+          <a href="dashboardUser/dashboard.php" class="get-started-btn scrollto">Dashboard</a>
+        <?php } else { ?>
+          <a href="login.php" class="get-started-btn scrollto">Login</a>
+        <?php } ?>
         <!-- <a href="#about" class="get-started-btn scrollto">Register</a> -->
       </div>
 

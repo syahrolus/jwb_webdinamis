@@ -12,10 +12,8 @@ if (isset($_POST["edit"])) {
             id='$id'";
 
     if ($query = mysqli_query($koneksi, $query)) {
-        header('location: ../view/dashboardAdmin/kategori_event/index.php?status=success');
+        header('location: ../view/dashboard/kategori_event/index.php?status=success');
     } else {
-        header('location: ../view/dashboardAdmin/kategori_event/edit_ke.php?status=error');
+        header('location: ../view/dashboard/kategori_event/edit_ke.php?status=error');
     }
 }
-
-?>

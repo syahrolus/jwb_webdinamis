@@ -21,11 +21,9 @@ if (isset($_POST["edit"])) {
 
     if ($query = mysqli_query($koneksi, $query)) {
         // echo mysqli_error($koneksi);
-        header('location: ../view/dashboardAdmin/instruktur/index.php?status=success');
+        header('location: ../view/dashboard/instruktur/index.php?status=success');
     } else {
         // echo mysqli_error($koneksi);
-        header('location: ../view/dashboardAdmin/instruktur/edit_instruktur.php?status=error');
+        header('location: ../view/dashboard/instruktur/edit_instruktur.php?status=error');
     }
 }
-
-?>

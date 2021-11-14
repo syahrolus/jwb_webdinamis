@@ -96,6 +96,22 @@ echo '
         }
       });
   }
+  function hapus_user_record(param) {
+    swal({
+        title: "Are you sure?",
+        text: "Once deleted, you will not be able to recover this imaginary file!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+          window.location.href = "../../../controller/record_delete.php?id=" + param;
+        } else {
+          swal("Your imaginary file is safe!");
+        }
+      });
+  }
 
   
 </script>

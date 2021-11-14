@@ -12,10 +12,8 @@ if (isset($_POST["edit"])) {
             id_bidang='$id'";
 
     if ($query = mysqli_query($koneksi, $query)) {
-        header('location: ../view/dashboardAdmin/bidang/index.php?status=success');
+        header('location: ../view/dashboard/bidang/index.php?status=success');
     } else {
-        header('location: ../view/dashboardAdmin/bidang/edit_bidang.php?status=error');
+        header('location: ../view/dashboard/bidang/edit_bidang.php?status=error');
     }
 }
-
-?>

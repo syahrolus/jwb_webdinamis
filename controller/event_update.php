@@ -27,11 +27,9 @@ if (isset($_POST["edit"])) {
 
     if ($query = mysqli_query($koneksi, $query)) {
         // echo mysqli_error($koneksi);
-        header('location: ../view/dashboardAdmin/events/index.php?status=success');
+        header('location: ../view/dashboard/events/index.php?status=success');
     } else {
         // echo mysqli_error($koneksi);
-        header('location: ../view/dashboardAdmin/events/edit_event.php?status=error');
+        header('location: ../view/dashboard/events/edit_event.php?status=error');
     }
 }
-
-?>

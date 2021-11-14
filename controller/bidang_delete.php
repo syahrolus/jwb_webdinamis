@@ -7,13 +7,10 @@ if (isset($_GET["id"])) {
     $query = "DELETE FROM Bidang WHERE id_bidang=$id";
 
     if ($query = mysqli_query($koneksi, $query)) {
-        header('location: ../view/dashboardAdmin/bidang/index.php?status=success');
+        header('location: ../view/dashboard/bidang/index.php?status=success');
     } else {
-        header('location: ../view/dashboardAdmin/bidang/index.php?status=error');
+        header('location: ../view/dashboard/bidang/index.php?status=error');
     }
 } else {
-    header('location: ../view/dashboardAdmin/bidang/index.php?status=error');
+    header('location: ../view/dashboard/bidang/index.php?status=error');
 }
-
-
-?>

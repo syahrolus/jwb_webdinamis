@@ -7,13 +7,10 @@ if (isset($_GET["id"])) {
     $query = "DELETE FROM Events WHERE id_event=$id";
 
     if ($query = mysqli_query($koneksi, $query)) {
-        header('location: ../view/dashboardAdmin/events/index.php?status=success');
+        header('location: ../view/dashboard/events/index.php?status=success');
     } else {
-        header('location: ../view/dashboardAdmin/events/index.php?status=error');
+        header('location: ../view/dashboard/events/index.php?status=error');
     }
 } else {
-    header('location: ../view/dashboardAdmin/events/index.php?status=error');
+    header('location: ../view/dashboard/events/index.php?status=error');
 }
-
-
-?>

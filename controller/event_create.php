@@ -17,9 +17,9 @@ if (isset($_POST["tambah"])) {
         VALUES (DEFAULT, '$nama', '$kategori', '$tgl_mulai', '$tgl_akhir', '$harga', '$deskripsi', $instruktur, $admin)";
 
     if ($query = mysqli_query($koneksi, $query)) {
-        header('location: ../view/dashboardAdmin/events/index.php?status=success');
+        header('location: ../view/dashboard/events/index.php?status=success');
     } else {
         echo mysqli_error($koneksi);
-        header('location: ../view/dashboardAdmin/events/nambah_event.php?status=error');
+        header('location: ../view/dashboard/events/nambah_event.php?status=error');
     }
 }

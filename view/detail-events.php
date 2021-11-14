@@ -2,6 +2,8 @@
 
 require_once('../controller/config.php');
 
+session_start();
+
 if (!isset($_GET['id'])) {
   header('location: index.php');
 }
@@ -98,7 +100,17 @@ if ($query = mysqli_query($koneksi, $query)) {
       </nav><!-- .navbar -->
 
       <div>
-        <a href="login.php" class="get-started-btn scrollto">Login</a>
+        <?php
+        if ($_SESSION["login"] == "true") {
+          if ($_SESSION["level"] == "admin") { ?>
+            <a href="dashboardAdmin/dashboard.php" class="get-started-btn scrollto">Dashboard</a>
+          <?php } else {
+          ?>
+            <a href="dashboardUser/dashboard.php" class="get-started-btn scrollto">Dashboard</a>
+          <?php }
+        } else { ?>
+          <a href="login.php" class="get-started-btn scrollto">Login</a>
+        <?php } ?>
         <!-- <a href="#about" class="get-started-btn scrollto">Register</a> -->
       </div>
 
@@ -144,20 +156,27 @@ if ($query = mysqli_query($koneksi, $query)) {
 
           <div class="col-lg-4">
             <div class="portfolio-info">
-              <h3><?= $row['nama_event']?></h3>
+              <h3><?= $row['nama_event'] ?></h3>
               <ul>
-                <li><strong>Bidang</strong>: <?= $row['nama_bidang']?></li>
-                <li><strong>Instruktur</strong>: <?= $row['nama_instruktur']?></li>
-                <li><strong>Harga</strong>: Rp.<?= $row['harga']?></li>
+                <li><strong>Bidang</strong>: <?= $row['nama_bidang'] ?></li>
+                <li><strong>Instruktur</strong>: <?= $row['nama_instruktur'] ?></li>
+                <li><strong>Harga</strong>: Rp.<?= $row['harga'] ?></li>
 
               </ul>
             </div>
             <div class="portfolio-description">
               <h2>Materi yang akan di dapatkan</h2>
-              <?= $row['deskripsi']?>
+              <?= $row['deskripsi'] ?>
             </div>
             <p>
-              <a class="btn btn-success mt-4" href="checkout.php" role="button" style="margin-left: 1%; width: 90%;">Check Out <i class="bi bi-chevron-right"></i></a>
+              <?php
+              if ($_SESSION["login"] == "true" && $_SESSION["level"] == "peserta") { ?>
+                <a class="btn btn-success mt-4" href="../controller/peserta_keranjang.php?id_event=<?= $row['id_event'] ?>" role="button" style="margin-left: 1%; width: 90%;">Keranjang<i class="bi bi-chevron-right"></i></a>
+              <?php
+              } else { ?>
+                <a class="btn btn-success mt-4" href="/jwb_webdinamis/view/login.php" role="button" style="margin-left: 1%; width: 90%;">Keranjang<i class="bi bi-chevron-right"></i></a>
+              <?php }
+              ?>
             </p>
           </div>
 

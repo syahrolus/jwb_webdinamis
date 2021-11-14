@@ -14,9 +14,9 @@ if (isset($_POST["tambah"])) {
         VALUES (DEFAULT, '$nama', '$tgl_lahir', '$alamat', '$gender', '$bidang')";
 
     if ($query = mysqli_query($koneksi, $query)) {
-        header('location: ../view/dashboardAdmin/instruktur/index.php?status=success');
+        header('location: ../view/dashboard/instruktur/index.php?status=success');
     } else {
         // echo mysqli_error($koneksi);
-        header('location: ../view/dashboardAdmin/instruktur/nambah_instruktur.php?status=error');
+        header('location: ../view/dashboard/instruktur/nambah_instruktur.php?status=error');
     }
 }

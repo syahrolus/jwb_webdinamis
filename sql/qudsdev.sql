@@ -1,3 +1,5 @@
+USE qudsdev;
+
 CREATE TABLE coba (
 	id INT(11) AUTO_INCREMENT PRIMARY KEY,
 	nama VARCHAR(255)
