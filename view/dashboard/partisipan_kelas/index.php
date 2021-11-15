@@ -5,51 +5,61 @@ if ($_SESSION['level'] != "peserta") {
     header('location: /jwb_webdinamis/view/index.php');
 }
 
+require_once('../../../controller/config.php');
+
 ?>
 
 <?php include('../../../template/head.php'); ?>
 <?php include('../../../template/sidebar.php'); ?>
 
-<div class="pagetitle">
-    <h1>Record Pendaftaran Peserta</h1>
+<div class="pagetitle mb-3">
+    <h1>Keranjang Event</h1>
 </div>
 
-<div class="card">
-    <h6 class="card-title" style="padding-top:30px; padding-left: 30px;">Events</h6>
-    <div class="card-body">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Id Peserta</th>
-                    <th scope="col">Nama</th>
-                    <th scope="col">Nama Events</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Admin</th>
-                    <th scope="col">Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Training</td>
-                    <td>17-08-1945</td>
-                    <td>18-08-1945</td>
-                    <td>Rp. 2000.000</td>
-                    <td>
-                        <a class='btn btn-primary' href='#' role='button'>Edit</a>
-                        <a class='btn btn-danger' onclick='validation(1)' href='#' role='button'>Hapus</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="con_tambah d-flex justify-content-end">
-            <div class="tambah" style="margin-right: 50px;">
-                <a class='btn btn-success' href='tambah_data.php' role='button'>Tambah</a>
-            </div>
-        </div>
+<!-- <div class="col-lg-4 col-md-6 mt-4" data-aos="zoom-in" data-aos-delay="100" style="max-width: 330px;">
+    <div class="icon-box">
+        <div class="icon"><i class="fas fa-code"></i></div>
+        <h4><a href="detail-events.php?id=1">tes</a></h4>
+        <p>Harga : Rp. tes </p>
+        <p>Deskripsi : tes </p>
+        <a class="btn btn-success mt-4" href="detail-events.php?id=tes" role="button" style="margin-left: 1%; width: 90%;">Baca Selengkapnya <i class="bi bi-chevron-right"></i></a>
     </div>
-</div>
+</div> -->
 
+<div class="row">
+    <?php
+    // SELECT pegawai.id_pegawai AS id, pegawai.nama AS nama, jabatan.nama_jabatan AS jabatan FROM jabatan JOIN pegawai ON jabatan.id_jabatan=pegawai.id_jbtn;
+    $username = $_SESSION['username'];
+    // echo $username;
+    // echo "<br>";
+    $status = 'ongoing';
+    $query = "SELECT Record_events_peserta.id AS id, Events.nama_event AS nama_event, Record_events_peserta.status AS status FROM Record_events_peserta JOIN Events ON Record_events_peserta.id_event=Events.id_event JOIN User ON Record_events_peserta.id_peserta=User.id WHERE User.username='$username' AND Record_events_peserta.status='$status'";
+    // $query = "SELECT * FROM Record_events_peserta JOIN Events ON Record_events_peserta.id_event=Events.id_event JOIN User ON Record_events_peserta.id_peserta=User.id WHERE User.username=$username AND Record_events_peserta.status='blm_bayar'";
+    // $i = 0;
+
+    // id_admin, nama_admin, email, alamat, tgl_lahir, gender
+    if ($query = mysqli_query($koneksi, $query)) {
+        while ($data = mysqli_fetch_array($query)) {
+    ?>
+            <div class="card col-sm-2" style="width: 15rem; margin-right: 10px;">
+                <div class="card-body">
+                    <h3 class="card-title m-1 p-1"><?= $data['nama_event'] ?></h3>
+                    status : <span class="badge rounded-pill bg-success"><?= $data['status'] ?></span>
+                    <br>
+                    <div class="d-flex justify-content-center">
+                        <?php if ($data['status'] == "pending") { ?>
+                            <a href="bukti_bayar.php?id=<?= $data['id'] ?>" class="btn btn-primary" disable style="margin-top: 10px; margin-right:5px;">Open</a>
+                        <?php
+                        } else { ?>
+                            <a href="bukti_bayar.php?id=<?= $data['id'] ?>" class="btn btn-primary" style="margin-top: 10px; margin-right:5px;">Open</a>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+    <?php
+        }
+    }
+    ?>
+
+</div>
 <?php include('../../../template/foot.php'); ?>

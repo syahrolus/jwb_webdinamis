@@ -29,15 +29,6 @@ if ($_SESSION['level'] == 'admin') {
                 </a>
             </li>
 
-            <li class="nav-item">
-                <?php
-                $target = "/jwb_webdinamis/view/dashboard/peserta/index.php";
-                ?>
-                <a class="nav-link <?= ($_SERVER['PHP_SELF'] == $target) ? '' : 'collapsed' ?>" href="<?= $target ?>">
-                    <i class="bi bi-grid"></i>
-                    <span>Peserta</span>
-                </a>
-            </li>
 
             <li class="nav-item">
                 <?php
@@ -66,16 +57,6 @@ if ($_SESSION['level'] == 'admin') {
                 <a class="nav-link <?= ($_SERVER['PHP_SELF'] == $target) ? '' : 'collapsed' ?>" href="<?= $target ?>">
                     <i class="bi bi-grid"></i>
                     <span>Kategori Event</span>
-                </a>
-            </li>
-
-            <li class="nav-item">
-                <?php
-                $target = "/jwb_webdinamis/view/dashboard/record/index.php";
-                ?>
-                <a class="nav-link <?= ($_SERVER['PHP_SELF'] == $target) ? '' : 'collapsed' ?>" href="<?= $target ?>">
-                    <i class="bi bi-grid"></i>
-                    <span>Record peserta</span>
                 </a>
             </li>
 
