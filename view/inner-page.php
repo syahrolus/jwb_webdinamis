@@ -47,7 +47,7 @@ session_start();
   <header id="header" class="fixed-top header-inner-pages">
     <div class="container d-flex align-items-center justify-content-lg-between">
 
-      <h1 class="logo me-auto me-lg-0"><img style="margin-right: 10px; margin-bottom: 5px;" src="../assets/assets2/img/gb_ku/logo.png" alt=""><a href="index.html">QudsDev<span>.</span></a></h1>
+      <h1 class="logo me-auto me-lg-0"><img style="margin-right: 10px; margin-bottom: 5px;" src="../assets/assets2/img/gb_ku/logo.png" alt=""><a href="index.php">QudsDev<span>.</span></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="../assets/assets2/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -82,7 +82,7 @@ session_start();
 
       <div>
         <?php
-        if ($_SESSION["login"] == "true") { ?>
+        if (isset($_SESSION["login"])) { ?>
           <a href="dashboardUser/dashboard.php" class="get-started-btn scrollto">Dashboard</a>
         <?php } else { ?>
           <a href="login.php" class="get-started-btn scrollto">Login</a>
@@ -125,7 +125,11 @@ session_start();
           ?>
               <div class="col-sm-3 mt-3">
                 <div class="card" style="width: 18rem;">
-                  <img class="card-img-top" src="../assets/img/profile-img.jpg" alt="Card image cap">
+                  <!-- <img class="card-img-top" src="../assets/img/profile-img.jpg" alt="Card image cap"> -->
+                  <!-- <div class=""> -->
+                  <img src="../assets/assets2/img/events/logo-codeigniter.png" alt="">
+                <!-- </div> -->
+                  <!-- <div class="icon"><i class="fas fa-code"></i></div> -->
                   <div class="card-body">
                     <h5 class="card-title"><?= $data['nama_event']; ?></h5>
                     <p>Harga : Rp. <?= $data['harga'] ?> </p>

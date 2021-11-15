@@ -42,14 +42,14 @@ if ($_SESSION['level'] != "admin") {
                             FROM Events 
                             JOIN Kategori_events ON Events.kategori=Kategori_events.id 
                             JOIN Instruktur ON Events.instruktur=Instruktur.id_instruktur 
-                            JOIN User ON Events.id_admin=User.id";
+                            JOIN User ON Events.id_admin=User.id ORDER BY id_event";
                 $i = 0;
                 // id_admin, nama_admin, email, alamat, tgl_lahir, gender
                 if ($query = mysqli_query($koneksi, $query)) {
                     while ($data = mysqli_fetch_array($query)) {
                         echo "
                         <tr>
-                            <th scope='row'>" . $data["id"] . "</th>
+                            <th scope='row'>" . $data["id_event"] . "</th>
                             <td style='overflow: hidden; max-width: 20ch; text-overflow: ellipsis; white-space: nowrap;'>" . $data["nama_event"] . "</td>
                             <td>" . $data["nama_kategori"] . "</td>
                             <td>" . $data["tgl_mulai"] . "</td>

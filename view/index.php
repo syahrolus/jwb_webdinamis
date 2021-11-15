@@ -84,7 +84,7 @@ session_start();
 
       <div>
         <?php
-        if ($_SESSION["login"] == "true") { ?>
+        if (isset($_SESSION["login"])) { ?>
           <a href="dashboard/dashboard.php" class="get-started-btn scrollto">Dashboard</a>
         <?php } else { ?>
           <a href="login.php" class="get-started-btn scrollto">Login</a>
@@ -134,7 +134,7 @@ session_start();
         </div>
         <div class="col-xl-2 col-md-3">
           <div class="icon-box">
-            <i class="fas fa-figma"></i>
+            <i class="fa fa-paint-brush" aria-hidden="true"></i>
             <h3><a href="">Graphic Design</a></h3>
           </div>
         </div>

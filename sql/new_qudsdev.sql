@@ -1,3 +1,5 @@
+CREATE DATABASE qudsdev;
+
 USE qudsdev;
 
 CREATE TABLE Bidang (
@@ -17,7 +19,7 @@ CREATE TABLE Instruktur (
 	bidang INT(11),
 	CONSTRAINT fk_instruktur_bidang FOREIGN KEY (bidang) REFERENCES Bidang(id_bidang)
 );
-CREATE TABLE User (
+CREATE TABLE USER (
 	id INT(11) PRIMARY KEY AUTO_INCREMENT,
 	username VARCHAR(255) NOT NULL UNIQUE,
 	pass VARCHAR(255) NOT NULL,
@@ -26,10 +28,10 @@ CREATE TABLE User (
 	tgl_lahir DATE NOT NULL,
 	gender BOOLEAN NOT NULL,
 	alamat VARCHAR(255),
-	level VARCHAR(255) NOT NULL
+	LEVEL VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE Events (
+CREATE TABLE EVENTS (
 	id_event INT(11) PRIMARY KEY AUTO_INCREMENT,
 	nama_event VARCHAR(255),
 	kategori INT(11) NOT NULL,

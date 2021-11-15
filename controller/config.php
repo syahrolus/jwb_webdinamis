@@ -1,9 +1,9 @@
 <?php
 
 // variabel
-define('DB_SERVER', '192.168.30.11');
-define('DB_USERNAME', 'qudsdev');
-define('DB_PASSWORD', 'qudsdev');
+define('DB_SERVER', 'localhost');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', '');
 define('DB_NAME', 'qudsdev');
 // $servername = "localhost";
 // $username = "root";

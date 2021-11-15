@@ -101,7 +101,7 @@ if ($query = mysqli_query($koneksi, $query)) {
 
       <div>
         <?php
-        if ($_SESSION["login"] == "true") {
+        if (isset($_SESSION["login"])) {
           if ($_SESSION["level"] == "admin") { ?>
             <a href="dashboardAdmin/dashboard.php" class="get-started-btn scrollto">Dashboard</a>
           <?php } else {
@@ -170,10 +170,16 @@ if ($query = mysqli_query($koneksi, $query)) {
             </div>
             <p>
               <?php
+              if (isset($_SESSION["login"])) {
               if ($_SESSION["login"] == "true" && $_SESSION["level"] == "peserta") { ?>
                 <a class="btn btn-success mt-4" href="../controller/peserta_keranjang.php?id_event=<?= $row['id_event'] ?>" role="button" style="margin-left: 1%; width: 90%;">Keranjang<i class="bi bi-chevron-right"></i></a>
               <?php
-              } else { ?>
+                  } else { ?>
+<a class="btn btn-success mt-4" href="/jwb_webdinamis/view/login.php" role="button" style="margin-left: 1%; width: 90%;">Keranjang<i class="bi bi-chevron-right"></i></a>
+                  <?php
+                  }
+                }
+              else { ?>
                 <a class="btn btn-success mt-4" href="/jwb_webdinamis/view/login.php" role="button" style="margin-left: 1%; width: 90%;">Keranjang<i class="bi bi-chevron-right"></i></a>
               <?php }
               ?>

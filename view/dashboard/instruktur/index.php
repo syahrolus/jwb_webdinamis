@@ -36,7 +36,7 @@ if ($_SESSION['level'] != "admin") {
                 <?php
                 // $query = "SELECT * FROM Instruktur ORDER BY id_instruktur";
                 // SELECT pegawai.id_pegawai AS id, pegawai.nama AS nama, jabatan.nama_jabatan AS jabatan FROM jabatan JOIN pegawai ON jabatan.id_jabatan=pegawai.id_jbtn;
-                $query = "SELECT * FROM Instruktur JOIN Bidang ON Instruktur.bidang=Bidang.id_bidang";
+                $query = "SELECT * FROM Instruktur JOIN Bidang ON Instruktur.bidang=Bidang.id_bidang ORDER BY id_instruktur";
                 $i = 0;
                 // id_admin, nama_admin, email, alamat, tgl_lahir, gender
                 if ($query = mysqli_query($koneksi, $query)) {

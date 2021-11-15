@@ -2,7 +2,7 @@
 
 session_start();
 
-if ($_SESSION["login"] == "true") {
+if (isset($_SESSION["login"])) {
 	header('location: /jwb_webdinamis/view/index.php?status=success');
 }
 
